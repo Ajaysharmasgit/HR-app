@@ -1,27 +1,28 @@
 import { useState } from "react";
+import "./EmployeeCard.css";  // This should be EmployeeCard.css
+import './EmployeeCard.css';  // Adjusted import
 
 const EmployeeCard = (props) => {
-  const [role, setRole] = useState(props.initRole);
+  const [age, setAge] = useState(props.initAge);
 
-  const clickHandler = ()=> {
-    if (role === "team-leader") {
-        setRole(props.initRole);
+  const clickHandler = () => {
+    if (age <= "18") {
+      setAge(props.initAge);
     } else {
-        setRole("go home now");
+      setAge("Team Lead");
     }
-    
-};
+  };
 
   return (
     <div className="card">
-      <p>Name:{props.name}</p>
-      <p> Role:{role}</p>
-      <p>Dep:{props.dep}</p>
+      <p>Name: {props.name}</p>
+      <p>Role: {props.role}</p>
+      <p>Department: {props.department}</p>
+      <p>Age: {age}</p>
+      <p>Start Date: {props.startDate}</p>
       <button onClick={clickHandler}>Promote</button>
     </div>
   );
 };
 
-
 export default EmployeeCard;
-
