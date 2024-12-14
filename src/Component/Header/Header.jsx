@@ -1,7 +1,8 @@
+import './Header.css'
 const Header = () => {
   return (
     <header>
-      <p>Something will start from here</p>
+      <h1>Employee dashboard</h1>
     </header>
   );
 };

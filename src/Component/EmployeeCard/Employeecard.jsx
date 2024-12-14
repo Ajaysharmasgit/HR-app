@@ -4,10 +4,10 @@ const EmployeeCard = (props) => {
   const [role, setRole] = useState(props.initRole);
 
   const clickHandler = ()=> {
-    if (role === "team leader") {
+    if (role === "team-leader") {
         setRole(props.initRole);
     } else {
-        setRole("Let's make you the team leader");
+        setRole("go home now");
     }
     
 };
