@@ -1,0 +1,148 @@
+/* Card overal */
+.card {
+  background: #f3f3f3;
+  border-radius: 5px;
+  color: #333;
+  padding: 1rem;
+  min-width: 300px;
+  width: 32%;
+  position: relative;
+}
+
+.card p {
+  text-align: left;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  background-color: green;
+  border-radius: 5px 5px 0 0;
+  height: 7px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.card.web::before {
+  background-color: #ffa200;
+}
+
+.card.game::before {
+  background-color: #006280;
+}
+
+.card.default::before {
+  background-color: #939393;
+}
+
+/* Card header part*/
+
+.cardHeader {
+  position: relative;
+}
+
+.cardName {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: inherit;
+  margin: inherit;
+}
+
+.cardName::after {
+  content: "";
+  position: relative;
+  width: 100%;
+  background-color: #e5e5e5;
+  height: 1px;
+  display: block;
+}
+
+.cardIcons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.cardIcons div {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.cardIconMessage {
+  display: none;
+}
+
+.cardIcons div:hover .cardIconMessage {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  width: 200px;
+  background-color: #333;
+  color: #fefefe;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Card main area part*/
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.cardData {
+  flex: 2;
+}
+.cardData input {
+  font-family: inherit;
+  padding: 0.2rem;
+  font-size: inherit;
+  width: 100%;
+}
+
+.cardImage {
+  flex: 1;
+  align-self: end;
+  display: flex;
+}
+
+.cardImage img {
+  object-fit: cover;
+  width: 80%;
+  margin-left: auto;
+  margin-top: 0.8rem;
+}
+
+.role {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: inherit;
+}
+
+.department,
+.location,
+.text,
+.years,
+.date {
+  font-size: inherit;
+  padding: inherit;
+  margin: inherit;
+}
+
+/* Card footer part*/
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 40px;
+}

@@ -1,17 +1,23 @@
-import './App.css'
-import EmployeeList from './Component/EmployeeList/Employeelist';
+import { useState } from "react";
+import { RouterProvider } from "react-router-dom";
+import createRoutes from "./routes/appRoutes.jsx";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const loginHandler = () => {
+    setIsLoggedIn((prevState) => !prevState);
+  };
+
+  const router = createRoutes(isLoggedIn, loginHandler);
 
   return (
-    <>
-      <div class="cardEmployee"> 
-        <h1>Employee</h1>
-        <main>
-        <EmployeeList/>
-        </main>
-        </div>
-        </>
+    <RouterProvider
+      router={router}
+      future={{
+        v7_startTransition: true,
+      }}
+    />
   );
 }
 

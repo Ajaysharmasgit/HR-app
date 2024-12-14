@@ -1,0 +1,15 @@
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding:1rem;
+  color: var(--light-grey);
+}
+
+footer a{
+  color: var(--highlight-color);
+}
+
+footer a:hover{
+  color: var(--light-grey);
+  text-decoration: underline;
+}
